@@ -14,7 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      waitlist: {
+        Row: {
+          created_at: string
+          crops: string | null
+          full_name: string
+          id: string
+          notes: string | null
+          phone: string
+          province: string
+          role: Database["public"]["Enums"]["waitlist_role"]
+        }
+        Insert: {
+          created_at?: string
+          crops?: string | null
+          full_name: string
+          id?: string
+          notes?: string | null
+          phone: string
+          province: string
+          role: Database["public"]["Enums"]["waitlist_role"]
+        }
+        Update: {
+          created_at?: string
+          crops?: string | null
+          full_name?: string
+          id?: string
+          notes?: string | null
+          phone?: string
+          province?: string
+          role?: Database["public"]["Enums"]["waitlist_role"]
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +55,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      waitlist_role: "agriculteur" | "cooperative" | "acheteur" | "autre"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +182,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      waitlist_role: ["agriculteur", "cooperative", "acheteur", "autre"],
+    },
   },
 } as const
