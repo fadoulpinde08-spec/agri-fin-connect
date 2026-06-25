@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "NafaPay sécurise les paiements de récoltes, l'achat d'intrants et bâtit votre historique financier. Conçu pour les producteurs du Burkina Faso.",
       },
       { name: "author", content: "NafaPay" },
-      { property: "og:title", content: "NafaPay — Paiements agricoles pour le Burkina Faso" },
+      { property: "og:title", content: "NafaPay — Le paiement mobile fait pour l'agriculteur burkinabè" },
       {
         property: "og:description",
         content:
@@ -102,6 +102,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "fr_BF" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "NafaPay — Le paiement mobile fait pour l'agriculteur burkinabè" },
+      { name: "description", content: "AgriFin Sahel is a fintech and agritech startup for West Africa." },
+      { property: "og:description", content: "AgriFin Sahel is a fintech and agritech startup for West Africa." },
+      { name: "twitter:description", content: "AgriFin Sahel is a fintech and agritech startup for West Africa." },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
